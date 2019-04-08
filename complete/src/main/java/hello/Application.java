@@ -1,5 +1,7 @@
 package hello;
 
+import java.io.Console;
+import java.sql.SQLOutput;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,6 +14,7 @@ public class Application implements CommandLineRunner {
 	private CustomerRepository repository;
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(Application.class, args);
 	}
 
