@@ -29,3 +29,4 @@ out/
 accessingdataneo4j.db
 dependency-reduced-pom.xml
 README.html
+/src/main/resources/application.properties
