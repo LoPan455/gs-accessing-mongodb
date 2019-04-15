@@ -3,6 +3,7 @@ package hello.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Objects;
+import java.util.concurrent.ThreadLocalRandom;
 import org.springframework.data.annotation.Id;
 
 public class Customer {
@@ -23,6 +24,8 @@ public class Customer {
   private String state;
 
   private String zipcode;
+  
+  private String customerNumber = setCustomerNumber();
 
   public Customer(){}
 
@@ -134,5 +137,14 @@ public class Customer {
 
   public void setZipcode(String zipcode) {
     this.zipcode = zipcode;
+  }
+
+  private String setCustomerNumber() {
+    int customerNumber = ThreadLocalRandom.current().nextInt(1, 100000);
+    return Integer.toString(customerNumber);
+  }
+  
+  public String getCustomerNumber() {
+    return this.customerNumber;
   }
 }
